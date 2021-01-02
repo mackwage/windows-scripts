@@ -1,5 +1,5 @@
 :: This is a basic Windows batch script to stop several native and some third party services in order to free up resources prior to running something resource-intensive. (e.g., playing a game, performing benchmarking, rendering). 
-:: This script intentionally only stops the services and does not disable them. So running this causing an observable aderse reaction should be resolved by a simple reboot.
+:: This script intentionally only stops the services and does not disable them. So running this causing an observable adverse reaction should be resolved by a simple reboot.
 :: Found this great reference: http://batcmd.com/windows/10/services/
 :: Please note  this disables several of the Bluetooth related services as I do not use any Bluetooth devices on my Windows PC. However they can be commented out or removed prior to running. 
 :: As always - open to feedback and suggestions! 
