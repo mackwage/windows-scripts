@@ -5,12 +5,8 @@
 :: Please note - this is not meant for broad enterprise deployment and am I not advocating for mass micro-management of Windows 10 services. This is simply something I do on my personal gaming PC and wanted to share. But the exercise itself is also very educational with regard to learning the services. 
 :: As always - open to feedback and suggestions! 
 ::
-net stop AGMService /y
-:: Adobe Genuine Monitor Service as part of Adobe Cloud software
-net stop AGSService /y
-:: Adobe Genuine Software Integrity Service as part of Adobe Cloud software
-net stop AdobeUpdateService /y
-:: AdobeUpdateService as part of Adobe Cloud software
+:: Windows Services
+::
 net stop BthAvctpSvc /y
 :: AVCTP - This is Audio Video Control Transport Protocol service.
 :: http://batcmd.com/windows/10/services/bthavctpsvc/
@@ -55,4 +51,32 @@ net stop SSDPSRV /y
 net stop lmhosts /y
 :: TCP/IP NetBIOS Helper
 :: Provides support for the NetBIOS over TCP/IP (NetBT) service and NetBIOS name resolution for clients on the network, therefore enabling users to share files, print, and log on to the network. If this service is stopped, these functions might be unavailable. If this service is disabled, any services that explicitly depend on it will fail to start.
+::
+:: Third Party Services
+::
+:: Adobe
+:: 
+net stop AGMService /y
+:: Adobe Genuine Monitor Service as part of Adobe Cloud software
+net stop AGSService /y
+:: Adobe Genuine Software Integrity Service as part of Adobe Cloud software
+net stop AdobeUpdateService /y
+:: AdobeUpdateService as part of Adobe Cloud software
+::
+:: VMware
+::
+net stop VMAuthdService /y
+:: VMware Authorization Service
+:: Authorization and authentication service for starting and accessing virtual machines.
+net stop VMnetDHCP /y
+:: VMware DHCP Service
+:: DHCP service for virtual networks.
+net stop "VMware NAT Service" /y
+:: Network address translation for virtual networks.
+net stop VMnetDHCP /y
+:: VMUSBArbService
+:: Arbitration and enumeration of USB devices for virtual machines
+net stop VMwareHostd /y
+:: VMware Workstation Server
+:: Remote access service for registration and management of virtual machines.
 pause
