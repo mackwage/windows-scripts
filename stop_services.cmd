@@ -1,7 +1,8 @@
 :: This is a basic Windows batch script to stop several native and some third party services in order to free up resources prior to running something resource-intensive. (e.g., playing a game, performing benchmarking, rendering). 
 :: This script intentionally only stops the services and does not disable them. So running this causing an observable adverse reaction should be resolved by a simple reboot.
 :: Found this great reference: http://batcmd.com/windows/10/services/
-:: Please note  this disables several of the Bluetooth related services as I do not use any Bluetooth devices on my Windows PC. However they can be commented out or removed prior to running. 
+:: This disables several of the Bluetooth related services as I do not use any Bluetooth devices on my Windows PC. However they can be commented out or removed prior to running. 
+:: Please note - this is not meant for broad enterprise deployment and am I not advocating for mass micro-management of Windows 10 services. This is simply something I do on my personal gaming PC and wanted to share. But the exercise itself is also very educational with regard to learning the services. 
 :: As always - open to feedback and suggestions! 
 ::
 net stop AGMService /y
